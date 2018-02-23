@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="header">
+    <h1 style="display: inline-block;">Dojo Activity Center</h1>
+    <p style="display: inline-block; margin-left:40px;">Welcome, @ViewBag.name!</p>
+    <a style="display: inline-block; margin-left:40px;" href="/logout">Logout</a>
+</div>
+<br>
+
+<table>
+    <tr>
+        <th>Activity</th>
+        <th>Date and Time</th>
+        <th>Duration</th>
+        <th>Event Coordinator</th>
+        <th>Number of Participants</th>
+        <th>Actions</th>
+    </tr>
+@foreach(var x in @ViewBag.ActivityList)
+{
+    <tr>
+        <td><a href='activity/@x["ActivityId"]'>@x["Title"]</a></td>
+        <td>@x["Date"] at @x["Time"]</td>
+        <td>@x["Duration"]</td>
+        <td>@x["Coordinator"].FirstName</td>
+        <td>@x["FollowerCount"]</td>
+        @if(x["creator"])
+        {
+            <td><a href='/delete/@x["ActivityId"]'>Delete</a></td>
+        }
+        else if(x["follower"])
+        {
+            <td><a href='/leave/@x["ActivityId"]'>Leave</a></td>
+        }
+        else
+        {
+            <td><a href='/join/@x["ActivityId"]'>Join</a></td>
+        }
+    </tr>
+}
+
+</table>
+<br><br>
+<a href="/CreateActivity"><button>Add New Activity!</button></a>
+<br>

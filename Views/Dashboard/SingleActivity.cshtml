@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model beltexam.Models.Activity
+
+<div id="header" style="display: inline-block; margin-right: 10px;">
+    <h1>Dojo Activity Center</h1>
+    <a href="/Home">Home</a>
+    <a href="/logout">Logout</a>
+</div>
+@foreach ( var guestlist in @ViewBag.guests)
+{
+    @foreach( var guest in @guestlist.Participants)
+    {
+        @if(ViewBag.creator == ViewBag.id)
+        {
+            <a href="/delete/@ViewBag.ActivityId"><button>Delete</button></a>
+                break;
+        }
+        else if(guest.User.UserId == ViewBag.id)
+        {
+            <a href="/leave/@ViewBag.ActivityId"><button>Leave</button></a>
+            break;
+        }
+        else
+        {
+            <a href="/join/@ViewBag.ActivityId"><button>Join</button></a>
+            break;
+        }
+    }
+}
+    
+<h2>@ViewBag.Stuff</h2>
+Description: @ViewBag.Description
+<br>
+<br>
+Participants: 
+<ul>
+@foreach ( var guestlist in @ViewBag.guests)
+{
+    @foreach( var guest in @guestlist.Participants)
+    {
+        @if(guest.User.UserId == ViewBag.id)
+        {
+            continue;
+        }
+        else
+        {
+        <li>@guest.User.FirstName</li>
+        }
+    }
+}
+</ul>

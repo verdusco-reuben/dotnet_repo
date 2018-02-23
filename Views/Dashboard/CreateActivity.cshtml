@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "New Activity";
+}
+@model beltexam.Models.ActivityViewModel
+<div id="header" style="display: inline-block; margin-right: 10px;">
+    <h1>Dojo Activity Center</h1>
+    <a href="/Home">Home</a>    
+    <a href="/logout">Logout</a>
+</div>
+<h2>Create an Activity!</h2>
+<br>
+<form action="/SubmitActivity" method="post">
+    <span asp-validation-for="Title"></span>
+    <label asp-for="Title">Title: </label>
+    <input asp-for="Title"/><br><br>
+    <span asp-validation-for="Time"></span>
+    <label asp-for="Time">Time: </label>
+    <input type="time" asp-for="Time"/><br><br>
+    <span asp-validation-for="Date"></span>
+    <label asp-for="Date">Date: </label>
+    <input type="date" asp-for="Date"/><br><br>
+    <span asp-validation-for="Description"></span>
+    <label asp-for="Description">Description: </label>
+    <input asp-for="Description"/><br><br>
+    <span asp-validation-for="DurationValue"></span>
+    <label asp-for="DurationValue">Duration: </label>
+    <input asp-for="DurationValue"/><br><br>
+    <span asp-validation-for="Duration"></span>
+    <label asp-for="Duration">Duration: </label>
+    <select asp-for="Duration"/>
+        <option value="hours">hours</option>
+        <option value="minutes">minutes</option>
+        <option value="days">days</option>
+    </select>
+    <br><br>
+    <button type="submit">Create Activity</button>
+</form>

@@ -1,0 +1,10 @@
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/bin/Debug/netcoreapp2.0/beltexam.deps.json
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/bin/Debug/netcoreapp2.0/beltexam.runtimeconfig.json
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/bin/Debug/netcoreapp2.0/beltexam.runtimeconfig.dev.json
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/bin/Debug/netcoreapp2.0/beltexam.dll
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/bin/Debug/netcoreapp2.0/beltexam.pdb
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/obj/Debug/netcoreapp2.0/beltexam.csproj.CoreCompileInputs.cache
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/obj/Debug/netcoreapp2.0/beltexam.AssemblyInfoInputs.cache
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/obj/Debug/netcoreapp2.0/beltexam.AssemblyInfo.cs
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/obj/Debug/netcoreapp2.0/beltexam.dll
+/Users/reubenverdusco/Desktop/DojoAssignments/netCore/_beltexam/beltexam/obj/Debug/netcoreapp2.0/beltexam.pdb

@@ -1,0 +1,31 @@
+﻿@model beltexam.Models.UserViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form action="/submit" method="post" style="display: inline-block; margin-right: 100px;">
+    <h2>Register</h2>
+    <span asp-validation-for="FirstName"></span>
+    <label asp-for="FirstName">First Name: </label>
+    <input asp-for="FirstName"/><br><br>
+    <span asp-validation-for="LastName"></span>
+    <label asp-for="LastName">Last Name: </label>
+    <input asp-for="LastName"/><br><br>
+    <span asp-validation-for="EmailAddress"></span>
+    <label asp-for="EmailAddress">Email: </label>
+    <input asp-for="EmailAddress"/><br><br>
+    <span asp-validation-for="Password"></span>
+    <label asp-for="Password">Password: </label>
+    <input asp-for="Password"/><br><br>
+    <span asp-validation-for="PasswordConfirmation"></span>
+    <label asp-for="PasswordConfirmation">Confirm PW: </label>
+    <input asp-for="PasswordConfirmation"><br><br>
+    <button type="submit">Submit</button>
+</form>
+<form action="/process" method="post" style="display: inline-block; vertical-align:top;">
+    <h2>Login</h2>
+    <p>Email: <input type="text" name="EmailAddress"></p><br>
+    <p>Password: <input type="text" name="Password"><p><br>
+    <button type="submit">Submit</button>
+    <p>@ViewBag.errors</p>
+</form>
